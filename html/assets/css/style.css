@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat;
+    box-sizing: border-box;
+    user-select: none;
+    color: white;
+    text-align: center;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    /* background-image: url(https://staticdelivery.nexusmods.com/mods/893/images/293/293-1598861313-889526336.jpeg); */
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#181818e6 0%, rgba(0, 0, 0, .97) 45%);
+}
+
+.container h1 {
+    font-size: 3vh;
+    padding-top: 6vh;
+}
+
+.close {
+    position: absolute;
+    font-weight: 600;
+    color: rgba(94, 94, 94, 0.603);
+    top: 6.4vh;
+    right: 10.4vh;
+    transition: .1s ease-in-out;
+}
+
+.close:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.grid {
+    position: absolute;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 115vh;
+    height: 70vh;
+    overflow-y: scroll;
+}
+
+.grid::-webkit-scrollbar {
+    width: .7vh;
+}
+
+.grid::-webkit-scrollbar-track {
+    width: .7vh;
+    background: rgba(71, 71, 71, 0.274);
+}
+
+.grid::-webkit-scrollbar-thumb {
+    width: .7vh;
+    background-color: rgba(255, 255, 255, 0.753);
+}
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 0vh 0vh 1vh 1vh;
+    width: 17vh;
+    height: 20vh;
+    border: .1vh solid rgba(48, 48, 48, 0.4);
+    flex-direction: column;
+    border-radius: .4vh;
+}
+
+.item img {
+    /* width: 6vh; */
+    height: 4vh;
+}
+
+.item button {
+    position: relative;
+    background: rgba(0, 0, 0, 0);
+    font-size: 1.2vh;
+    padding: .3vh 2.2vh;
+    border: .1vh solid rgba(48, 48, 48, 0.4);
+    border-radius: .6vh;
+    bottom: -3vh;
+    transition: .1s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    border: .1vh solid rgba(214, 214, 214, 0.4);
+}
+
+.notification {
+    position: absolute;
+    top: 4vh;
+    display: flex;
+    gap: 1vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.error {
+    max-width: 27vh;
+    margin-left: -100vh;
+    padding: 1vh 2vh;
+    border-radius: 0 0.5vh 0.5vh 0;
+    animation: slide 0.3s forwards;
+    border: 0.1vh solid rgba(83, 83, 83, 0.7);
+    border-left: none;
+    background: linear-gradient(90deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,1) 100%);
+}
+
+@keyframes slide {
+    100% { margin-left: 0; }
+}
